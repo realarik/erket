@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EduCampus - Educational Management System
 
 Sistem manajemen kampus terpadu untuk mengelola siswa, dosen, kelas, jadwal, perpustakaan digital, dan laporan kehadiran.
@@ -159,3 +160,6 @@ EduCampus Development Team
 
 **Versi:** 1.0.0  
 **Terakhir Diupdate:** Desember 2025
+=======
+# EduCampus
+>>>>>>> 749434698ef56cb05fe1065340da872224c7b4f0
