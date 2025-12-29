@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # EduCampus - Educational Management System
 
 Sistem manajemen kampus terpadu untuk mengelola siswa, dosen, kelas, jadwal, perpustakaan digital, dan laporan kehadiran.
