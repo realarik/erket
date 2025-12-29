@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCampus - Home</title>
+<meta name="description" content="EduCampus - Educational Management System">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style type="text/tailwindcss">
+  :root {
+    --primary: #165DFF;
+    --primary-hover: #0E4BD9;
+    --foreground: #080C1A;
+    --secondary: #6A7686;
+    --muted: #EFF2F7;
+    --border: #F3F4F3;
+    --success: #30B22D;
+  }
+</style>
+</head>
+<body class="font-sans bg-muted min-h-screen">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
+  <div class="flex items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+        <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
+      </div>
+      <span class="text-foreground font-bold text-lg">EduCampus</span>
+    </div>
+    <a href="login.html" class="px-4 py-2 bg-primary text-white rounded-full hover:bg-primary-hover transition">Sign In</a>
+  </div>
+</nav>
+
+<main class="pt-24 px-6 pb-12">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">Welcome to EduCampus</h1>
+      <p class="text-lg text-secondary mb-8">Comprehensive Educational Management System</p>
+      <a href="login.html" class="inline-block px-8 py-3 bg-primary text-white rounded-full hover:bg-primary-hover transition font-medium">
+        Get Started
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Students Management</h3>
+        <p class="text-secondary text-sm mb-4">Manage student records, enrollment, and academic progress.</p>
+        <a href="students.html" class="text-primary hover:underline font-medium text-sm">Manage Students →</a>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="briefcase" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Lecturers Management</h3>
+        <p class="text-secondary text-sm mb-4">Manage lecturer profiles, schedules, and assignments.</p>
+        <a href="lecturers.html" class="text-primary hover:underline font-medium text-sm">Manage Lecturers →</a>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="calendar" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Classes & Schedules</h3>
+        <p class="text-secondary text-sm mb-4">Manage class timetables, rooms, and schedules.</p>
+        <a href="classes-schedules.html" class="text-primary hover:underline font-medium text-sm">View Schedule →</a>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="book" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Course Learning</h3>
+        <p class="text-secondary text-sm mb-4">Access course materials and learning resources.</p>
+        <a href="course-learning.html" class="text-primary hover:underline font-medium text-sm">Start Learning →</a>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="library" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Digital Library</h3>
+        <p class="text-secondary text-sm mb-4">Access academic files and digital resources.</p>
+        <a href="campus-library.html" class="text-primary hover:underline font-medium text-sm">Open Library →</a>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="clipboard-list" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Attendance Reports</h3>
+        <p class="text-secondary text-sm mb-4">View and analyze attendance statistics.</p>
+        <a href="attendance-reports.html" class="text-primary hover:underline font-medium text-sm">View Reports →</a>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="award" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Student Leaderboard</h3>
+        <p class="text-secondary text-sm mb-4">Track student achievements and rankings.</p>
+        <a href="leaderboard.html" class="text-primary hover:underline font-medium text-sm">View Leaderboard →</a>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 border border-border hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+          <i data-lucide="user-plus" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h3 class="text-foreground font-bold text-lg mb-2">Add Student</h3>
+        <p class="text-secondary text-sm mb-4">Register new students with multi-step form.</p>
+        <a href="add-student.html" class="text-primary hover:underline font-medium text-sm">Add Student →</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-border bg-white py-8 mt-16">
+  <div class="max-w-6xl mx-auto px-6 text-center text-secondary text-sm">
+    <p>&copy; 2025 EduCampus - Educational Management System. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  lucide.createIcons();
+});
+</script>
+</body>
+</html>

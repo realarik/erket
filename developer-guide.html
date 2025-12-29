@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCampus - Developer Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style type="text/tailwindcss">
+  :root {
+    --primary: #165DFF;
+    --primary-hover: #0E4BD9;
+    --foreground: #080C1A;
+    --secondary: #6A7686;
+    --muted: #EFF2F7;
+    --border: #F3F4F3;
+  }
+  pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto;
+  }
+  code {
+    @apply bg-gray-100 px-2 py-1 rounded text-sm;
+  }
+  pre code {
+    @apply bg-transparent px-0 py-0;
+  }
+</style>
+</head>
+<body class="font-sans bg-muted min-h-screen">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
+  <div class="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+        <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
+      </div>
+      <span class="text-foreground font-bold text-lg">EduCampus</span>
+    </div>
+    <div class="flex gap-4">
+      <a href="index.html" class="text-secondary hover:text-foreground transition">Home</a>
+      <a href="INSTALLATION.md" class="text-secondary hover:text-foreground transition">Installation</a>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-24 px-6 pb-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-foreground mb-4">Developer Guide</h1>
+      <p class="text-lg text-secondary">Complete documentation for EduCampus development</p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-6">📑 Table of Contents</h2>
+      <ul class="space-y-3 text-secondary">
+        <li><a href="#quick-start" class="text-primary hover:underline">Quick Start</a></li>
+        <li><a href="#project-structure" class="text-primary hover:underline">Project Structure</a></li>
+        <li><a href="#technology-stack" class="text-primary hover:underline">Technology Stack</a></li>
+        <li><a href="#file-descriptions" class="text-primary hover:underline">File Descriptions</a></li>
+        <li><a href="#running-methods" class="text-primary hover:underline">Methods to Run</a></li>
+        <li><a href="#npm-commands" class="text-primary hover:underline">NPM Commands</a></li>
+        <li><a href="#customization" class="text-primary hover:underline">Customization</a></li>
+        <li><a href="#troubleshooting" class="text-primary hover:underline">Troubleshooting</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Start -->
+    <section id="quick-start" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">🚀 Quick Start</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Method 1: Batch Script (Windows)</h3>
+          <pre><code>cd C:\Users\candr\Downloads\educampus
+run.bat</code></pre>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Method 2: npm</h3>
+          <pre><code>npm install
+npm start</code></pre>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Method 3: Python</h3>
+          <pre><code>python -m http.server 8000</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Structure -->
+    <section id="project-structure" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">📁 Project Structure</h2>
+      <pre><code>educampus/
+├── index.html                    # Landing page
+├── login.html                   # Login page
+├── students.html                # Student management
+├── lecturers.html               # Lecturer management
+├── classes-schedules.html       # Class scheduling
+├── course-learning.html         # Course content
+├── campus-library.html          # Digital library
+├── attendance-reports.html      # Attendance tracking
+├── leaderboard.html             # Student rankings
+├── add-student.html             # Add student form
+│
+├── package.json                 # NPM configuration
+├── run.bat                      # Windows batch script
+├── run.ps1                      # PowerShell script
+├── run.sh                       # Bash script (Linux/Mac)
+│
+├── .vscode/                     # VS Code config
+│   ├── launch.json             # Debug configuration
+│   ├── settings.json           # Editor settings
+│   └── extensions.json         # Recommended extensions
+│
+├── README.md                    # Main documentation
+├── INSTALLATION.md              # Installation guide
+└── developer-guide.html         # This file</code></pre>
+    </section>
+
+    <!-- Technology Stack -->
+    <section id="technology-stack" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">🛠️ Technology Stack</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Frontend</h3>
+          <ul class="space-y-2 text-secondary">
+            <li>✓ HTML5</li>
+            <li>✓ Tailwind CSS (via CDN)</li>
+            <li>✓ JavaScript (Vanilla)</li>
+            <li>✓ Lucide Icons</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Tools & Libraries</h3>
+          <ul class="space-y-2 text-secondary">
+            <li>✓ Chart.js (for charts)</li>
+            <li>✓ http-server (local server)</li>
+            <li>✓ npm (package manager)</li>
+            <li>✓ Node.js (runtime)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- File Descriptions -->
+    <section id="file-descriptions" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">📄 File Descriptions</h2>
+      <div class="space-y-4">
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">index.html</h3>
+          <p class="text-secondary text-sm">Landing page with navigation to all modules. Start here!</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">login.html</h3>
+          <p class="text-secondary text-sm">Login page with form validation and error handling</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">students.html</h3>
+          <p class="text-secondary text-sm">Student management: add, edit, filter, bulk actions</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">lecturers.html</h3>
+          <p class="text-secondary text-sm">Lecturer management with department filtering</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">classes-schedules.html</h3>
+          <p class="text-secondary text-sm">Class scheduling with timetable and room management</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">course-learning.html</h3>
+          <p class="text-secondary text-sm">Course content with lesson tracking and progress</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">campus-library.html</h3>
+          <p class="text-secondary text-sm">Digital library with file management and categorization</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">attendance-reports.html</h3>
+          <p class="text-secondary text-sm">Attendance tracking with Chart.js visualization</p>
+        </div>
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="font-bold text-foreground">leaderboard.html</h3>
+          <p class="text-secondary text-sm">Student rankings and achievements leaderboard</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Running Methods -->
+    <section id="running-methods" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">▶️ Methods to Run</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-bold text-foreground mb-2">1. Windows Batch Script</h3>
+          <pre><code>run.bat</code></pre>
+          <p class="text-secondary text-sm">Automatically installs dependencies and starts server</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">2. PowerShell</h3>
+          <pre><code>.\run.ps1</code></pre>
+          <p class="text-secondary text-sm">Requires execution policy: <code>Set-ExecutionPolicy Bypass</code></p>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">3. npm Commands</h3>
+          <pre><code>npm install          # Install dependencies
+npm start           # Start with auto-open
+npm run server      # Start server only
+npm run dev         # Development mode with caching disabled</code></pre>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">4. Python</h3>
+          <pre><code>python -m http.server 8000</code></pre>
+          <p class="text-secondary text-sm">Built-in Python web server</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">5. Direct Access</h3>
+          <p class="text-secondary text-sm">Open HTML files directly in browser (some features may not work)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NPM Commands -->
+    <section id="npm-commands" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">📦 NPM Commands</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-border">
+              <th class="text-left py-2 px-4 font-bold text-foreground">Command</th>
+              <th class="text-left py-2 px-4 font-bold text-foreground">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-border">
+              <td class="py-2 px-4"><code>npm install</code></td>
+              <td class="text-secondary">Install all dependencies</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-2 px-4"><code>npm start</code></td>
+              <td class="text-secondary">Start server and open browser</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-2 px-4"><code>npm run server</code></td>
+              <td class="text-secondary">Start server without opening browser</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4"><code>npm run dev</code></td>
+              <td class="text-secondary">Start with cache disabled</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Customization -->
+    <section id="customization" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">🎨 Customization</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Change Port Number</h3>
+          <p class="text-secondary mb-2">Edit <code>package.json</code>:</p>
+          <pre><code>{
+  "scripts": {
+    "start": "http-server -p 3000 -o",
+    "server": "http-server -p 3000"
+  }
+}</code></pre>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Customize Colors</h3>
+          <p class="text-secondary mb-2">Edit CSS variables in any HTML file:</p>
+          <pre><code>:root {
+  --primary: #165DFF;
+  --primary-hover: #0E4BD9;
+  --foreground: #080C1A;
+  --secondary: #6A7686;
+  --success: #30B22D;
+  --error: #ED6B60;
+}</code></pre>
+        </div>
+        <div>
+          <h3 class="font-bold text-foreground mb-2">Add New Font</h3>
+          <p class="text-secondary mb-2">Import in HTML head:</p>
+          <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Your+Font&display=swap" rel="stylesheet"&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section id="troubleshooting" class="bg-white rounded-3xl p-8 mb-8 border border-border">
+      <h2 class="text-2xl font-bold text-foreground mb-4">🆘 Troubleshooting</h2>
+      <div class="space-y-4">
+        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+          <h3 class="font-bold text-red-700 mb-2">❌ "Node.js not installed"</h3>
+          <p class="text-sm text-red-600">Download from https://nodejs.org/ and install</p>
+        </div>
+        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+          <h3 class="font-bold text-red-700 mb-2">❌ "Port 8000 already in use"</h3>
+          <p class="text-sm text-red-600">Change port in package.json or kill process using port</p>
+        </div>
+        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+          <h3 class="font-bold text-red-700 mb-2">❌ "Cannot find module"</h3>
+          <p class="text-sm text-red-600">Run <code>npm install</code> to install dependencies</p>
+        </div>
+        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+          <h3 class="font-bold text-red-700 mb-2">❌ "Styles not loading"</h3>
+          <p class="text-sm text-red-600">Hard refresh: Ctrl+Shift+R (Chrome) or Ctrl+F5 (Firefox)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="bg-primary/10 rounded-3xl p-8 border border-primary mb-8">
+      <h2 class="text-2xl font-bold text-foreground mb-4">🎯 Next Steps</h2>
+      <ul class="space-y-2 text-secondary">
+        <li>✓ Install Node.js if not already installed</li>
+        <li>✓ Run one of the startup methods above</li>
+        <li>✓ Visit http://localhost:8000</li>
+        <li>✓ Explore all modules and features</li>
+        <li>✓ Customize for your needs</li>
+        <li>✓ Deploy to production server</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="border-t border-border bg-white py-8 mt-16">
+  <div class="max-w-4xl mx-auto px-6 text-center text-secondary text-sm">
+    <p>&copy; 2025 EduCampus - Educational Management System</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  lucide.createIcons();
+});
+</script>
+</body>
+</html>
