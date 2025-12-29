@@ -1,164 +1,233 @@
-# EduCampus - Educational Management System
+# 🎓 EduCampus – Educational Management System
 
-Sistem manajemen kampus terpadu untuk mengelola siswa, dosen, kelas, jadwal, perpustakaan digital, dan laporan kehadiran.
+EduCampus is a modern, lightweight **educational management system** designed to help schools and campuses manage students, lecturers, classes, schedules, learning materials, and attendance — all in one place.
 
-## 📋 Fitur
+This project is built as a **front-end–only application** for learning, demo, and portfolio purposes.
 
-- **Student Management** - Kelola data siswa, pendaftaran, dan kemajuan akademik
-- **Lecturers Management** - Kelola profil dosen dan jadwal mengajar
-- **Classes & Schedules** - Atur kelas, jadwal, dan ruangan
-- **Course Learning** - Akses materi pelajaran dan sumber belajar
-- **Digital Library** - Kelola file akademik dan sumber daya digital
-- **Attendance Reports** - Laporan dan analisis kehadiran
-- **Student Leaderboard** - Pelacakan prestasi dan peringkat siswa
-- **Add Student** - Formulir multi-step untuk pendaftaran siswa baru
+---
 
-## 🚀 Quick Start
+## ✨ Features
 
-### Opsi 1: Menggunakan Script (Cara Termudah)
+- **Student Management**  
+  Manage student data, enrollment, and academic progress
 
-1. **Buka Command Prompt/PowerShell** di folder `educampus`
-2. **Jalankan script:**
+- **Lecturer Management**  
+  Manage lecturer profiles and teaching schedules
+
+- **Classes & Schedules**  
+  Organize classes, schedules, and rooms
+
+- **Course Learning**  
+  Access course materials and learning resources
+
+- **Digital Library**  
+  Store and manage academic files and digital resources
+
+- **Attendance Reports**  
+  View attendance records and analytics
+
+- **Student Leaderboard**  
+  Track student performance and rankings
+
+- **Add Student (Multi-Step Form)**  
+  Step-by-step student registration form
+
+---
+
+## 🚀 Getting Started
+
+You can run EduCampus locally in **four simple ways**.  
+Choose the method that works best for you.
+
+---
+
+### ✅ Option 1: Run Using Script (Easiest – Windows)
+
+1. Open **Command Prompt** or **PowerShell**
+2. Navigate to the `educampus` project folder
+3. Run:
    ```bash
    run.bat
    ```
-3. Browser akan otomatis membuka `http://localhost:8000`
-
-### Opsi 2: Manual dengan npm
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-2. **Jalankan server:**
-   ```bash
-   npm start
-   ```
-   atau
-   ```bash
-   npm run server
-   ```
-
-3. **Buka di browser:**
+4. Your browser will automatically open:
    ```
    http://localhost:8000
    ```
 
-### Opsi 3: Python (Jika Python terinstall)
+---
 
-```bash
-python -m http.server 8000
-```
-Kemudian buka `http://localhost:8000`
+### ✅ Option 2: Run Using npm (Node.js)
 
-### Opsi 4: Menggunakan VS Code Live Server Extension
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-1. Install extension "Live Server"
-2. Klik kanan pada file HTML dan pilih "Open with Live Server"
+2. Start the local server:
+   ```bash
+   npm start
+   ```
+   or
+   ```bash
+   npm run server
+   ```
 
-## 📁 Struktur File
+3. Open your browser:
+   ```
+   http://localhost:8000
+   ```
+
+---
+
+### ✅ Option 3: Run Using Python
+
+1. Open a terminal in the project folder
+2. Run:
+   ```bash
+   python -m http.server 8000
+   ```
+3. Open in browser:
+   ```
+   http://localhost:8000
+   ```
+
+---
+
+### ✅ Option 4: VS Code Live Server
+
+1. Install **Live Server** extension in VS Code
+2. Right-click `index.html`
+3. Select **Open with Live Server**
+
+---
+
+## 📁 Project Structure
 
 ```
 educampus/
-├── index.html                 # Halaman utama / dashboard
-├── login.html                # Halaman login
-├── students.html             # Manajemen siswa
-├── lecturers.html            # Manajemen dosen
-├── classes-schedules.html    # Jadwal kelas
-├── course-learning.html      # Pelajaran kursus
-├── campus-library.html       # Perpustakaan digital
-├── attendance-reports.html   # Laporan kehadiran
-├── leaderboard.html          # Peringkat siswa
-├── add-student.html          # Tambah siswa
-├── package.json              # Konfigurasi npm
-├── run.bat                   # Script untuk menjalankan (Windows)
-└── README.md                 # File ini
+├── index.html              # Main dashboard
+├── login.html              # Login page
+├── students.html           # Student management
+├── lecturers.html          # Lecturer management
+├── classes-schedules.html  # Class schedules
+├── course-learning.html    # Course learning page
+├── campus-library.html     # Digital library
+├── attendance-reports.html # Attendance reports
+├── leaderboard.html        # Student leaderboard
+├── add-student.html        # Add new student form
+├── package.json            # npm configuration
+├── run.bat                 # Windows run script
+└── README.md               # Project documentation
 ```
 
-## 🛠️ Persyaratan
+---
 
-- **Node.js** (v14 atau lebih baru) - [Download](https://nodejs.org/)
-- **npm** (biasanya terinstall dengan Node.js)
-- **Browser modern** (Chrome, Firefox, Edge, Safari)
+## 🌐 Application Pages
 
-## 📚 Halaman Utama
+| Page | URL | Description |
+|-----|-----|-------------|
+| Home | `/` | Main dashboard |
+| Login | `/login.html` | Login page |
+| Students | `/students.html` | Student management |
+| Lecturers | `/lecturers.html` | Lecturer management |
+| Classes | `/classes-schedules.html` | Class schedules |
+| Courses | `/course-learning.html` | Learning materials |
+| Library | `/campus-library.html` | Digital library |
+| Attendance | `/attendance-reports.html` | Attendance reports |
+| Leaderboard | `/leaderboard.html` | Student rankings |
+| Add Student | `/add-student.html` | Add new student |
 
-Setelah menjalankan server, akses halaman berikut:
+---
 
-| Halaman | URL | Deskripsi |
-|---------|-----|-----------|
-| Home | `http://localhost:8000` | Halaman utama dengan navigasi |
-| Login | `http://localhost:8000/login.html` | Halaman login |
-| Students | `http://localhost:8000/students.html` | Manajemen data siswa |
-| Lecturers | `http://localhost:8000/lecturers.html` | Manajemen data dosen |
-| Classes | `http://localhost:8000/classes-schedules.html` | Jadwal kelas |
-| Course | `http://localhost:8000/course-learning.html` | Materi pembelajaran |
-| Library | `http://localhost:8000/campus-library.html` | Perpustakaan digital |
-| Attendance | `http://localhost:8000/attendance-reports.html` | Laporan kehadiran |
-| Leaderboard | `http://localhost:8000/leaderboard.html` | Peringkat siswa |
-| Add Student | `http://localhost:8000/add-student.html` | Form tambah siswa |
+## 🛠️ Technologies Used
 
-## 🔧 Teknologi yang Digunakan
+- **HTML5** – Semantic page structure  
+- **Tailwind CSS** – Styling (CDN version)  
+- **JavaScript (Vanilla)** – Application logic  
+- **Lucide Icons** – User interface icons  
+- **Chart.js** – Charts and data visualization  
+- **http-server** – Simple local development server  
 
-- **HTML5** - Struktur halaman
-- **Tailwind CSS** - Styling (via CDN)
-- **Lucide Icons** - Ikon UI (via CDN)
-- **JavaScript** - Interaktivitas
-- **Chart.js** - Grafik dan visualisasi
-- **http-server** - Server lokal sederhana
+---
 
-## 💡 Catatan Penting
+## ⚠️ Important Notes
 
-1. **Tidak Ada Database** - Saat ini semua data disimpan dalam JavaScript (data hilang setelah refresh)
-   - Untuk produksi, integrasikan dengan backend API
+- **No Backend / No Database**
+  - All data is stored in JavaScript
+  - Data resets when the page reloads
+  - Intended for demo and learning purposes
 
-2. **Modal "Page Not Found"** - Beberapa link navigasi menampilkan modal karena belum terintegrasi
-   - Ini adalah perilaku placeholder
+- **Placeholder Navigation**
+  - Some links display a “Page Not Found” modal
+  - This is expected behavior for unfinished features
 
-3. **Responsive Design** - Aplikasi dirancang untuk desktop dan mobile
+- **Responsive Design**
+  - Works on desktop, tablet, and mobile devices
 
-4. **Development Mode** - Server development ini hanya untuk testing lokal
-   - Untuk produksi, gunakan web server profesional (Apache, Nginx, dll)
+- **Development Use Only**
+  - Not production-ready
+  - Backend API and database required for real-world use
 
-## 🚨 Troubleshooting
+---
 
-### Error: "Node.js is not installed"
+## 🧪 Troubleshooting
+
+### ❌ Node.js Not Installed
+- Download and install from:
+  https://nodejs.org/
+- Restart your terminal after installation
+
+### ❌ `npm` Command Not Found
 ```bash
-# Install Node.js dari https://nodejs.org/
-# Setelah instalasi, restart Command Prompt/PowerShell
+node --version
 ```
 
-### Error: "npm: command not found"
-```bash
-# Pastikan Node.js terinstall dengan benar
-# Cek dengan: node --version
+### ❌ Port 8000 Already in Use
+1. Open `package.json`
+2. Change:
+   ```json
+   "start": "http-server -p 8000 -o"
+   ```
+   to:
+   ```json
+   "start": "http-server -p 3000 -o"
+   ```
+
+3. Open:
+   ```
+   http://localhost:3000
+   ```
+
+### ❌ Browser Does Not Open Automatically
+Open manually:
+```
+http://localhost:8000
 ```
 
-### Port 8000 sudah digunakan
-```bash
-# Ganti port di package.json, misalnya port 3000:
-# Ubah "start": "http-server -p 8000 -o" 
-# Menjadi "start": "http-server -p 3000 -o"
-```
+---
 
-### Browser tidak otomatis membuka
-```bash
-# Buka manual: http://localhost:8000
-```
+## 📌 Roadmap
 
-## 📝 Lisensi
+- Backend API integration
+- Database support
+- Authentication & authorization
+- Role-based access (Admin, Lecturer, Student)
+- Export reports (PDF / Excel)
 
-MIT License - Gratis untuk penggunaan pribadi dan komersial
+---
 
-## 👥 Tim Pengembang
+## 📝 License
+
+MIT License  
+Free for personal and commercial use.
+
+---
+
+## 👥 Development Team
 
 EduCampus Development Team
 
 ---
 
-**Versi:** 1.0.0  
-**Terakhir Diupdate:** Desember 2025
-=======
-# EduCampus
->>>>>>> 749434698ef56cb05fe1065340da872224c7b4f0
+**Version:** 1.0.0  
+**Last Updated:** December 2025
